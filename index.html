@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/pokeball.png" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script defer src="./js/script.js"></script>
+    <title>Pokédex</title>
+  </head>
+
+  <body>
+    <main>
+      <img
+        src="https://img.icons8.com/ios/50/info--v1.png"
+        alt="Informação"
+        class="information"
+        onclick="modal.showModal()"
+      />
+      <img
+        src="https://media.tenor.com/nvfY12IPMBcAAAAi/pokemon-snorlax.gif"
+        alt="pokemon"
+        class="pokemon_image"
+      />
+      <h1 class="pokemon_data">
+        <span class="pokemon_number"></span>
+        <span class="separator">-</span>
+        <span class="pokemon_name"></span>
+      </h1>
+      <form class="form">
+        <input
+          type="search"
+          class="input_search"
+          placeholder="Nome ou Número"
+          required
+        />
+      </form>
+      <div class="buttons">
+        <button class="button btn-prev">< Anterior</button>
+        <button class="button btn-next">Próximo ></button>
+      </div>
+      <img src="./images/pokedex.png" alt="pokédex" class="pokedex" />
+    </main>
+  </body>
+</html>
+
+<dialog id="modal" class="dialog">
+  <div class="stats_div">
+    <div class="stats">
+        <p class="type_stats">Nome:&nbsp;</p>
+        <span class="stats_name"></span>
+    </div>
+    <div class="stats">
+        <p class="type_stats">Número:&nbsp;</p>
+        <p class="stats_number"></p>
+    </div>
+    <div class="stats">
+        <p class="type_stats">Peso:&nbsp;</p>
+        <p class="stats_weight"></p>
+    </div>
+    <div class="stats">
+        <p class="type_stats">Altura:&nbsp;</p>
+        <p class="stats_height"></p>
+    </div>
+    <div class="stats">
+        <p class="type_stats">Vida:&nbsp;</p>
+        <p class="stats_health"></p>
+    </div>
+    <div class="stats">
+        <p class="type_stats">Ataque:&nbsp;</p>
+        <p class="stats_atack"></p>
+    </div>
+    <div class="stats">
+        <p class="type_stats">Defesa:&nbsp;</p>
+        <p class="stats_defense"></p>
+    </div>
+    <div class="stats">
+        <p class="type_stats">Velocidade:&nbsp;</p>
+        <p class="stats_speed"></p>
+    </div>
+  </div>
+  <button onclick="modal.close()" class="close_modal">Fechar</button>
+</dialog>

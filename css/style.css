@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  text-align: center;
+  background: linear-gradient(to bottom, #6ab7f5, #ec5353);
+  min-height: 100vh;
+}
+
+main {
+  display: inline-block;
+  margin-top: 2%;
+  position: relative;
+}
+
+.pokedex {
+  width: 100%;
+  max-width: 425px;
+}
+
+.pokemon_image {
+  position: absolute;
+  bottom: 55%;
+  left: 50%;
+  transform: translate(-65%, 30%);
+  height: 18%;
+}
+
+.pokemon_data {
+  position: absolute;
+  font-weight: 600;
+  color: #aaa;
+  top: 54%;
+  right: 25%;
+  font-size: clamp(8px, 5vw, 25px);
+}
+
+.pokemon_name {
+  color: #3a444d;
+  text-transform: capitalize;
+}
+
+.form {
+  position: absolute;
+  background-color: red;
+  width: 65%;
+  top: 65%;
+  left: 13.5%;
+}
+
+.input_search {
+  width: 100%;
+  padding: 4%;
+  outline: none;
+  border: 2px solid #333;
+  border-radius: 5px;
+  font-weight: 600;
+  color: #3a444d;
+  font-size: clamp(8px, 5vw, 1rem);
+  box-shadow: -3px 4px 0px #888, -5px 7px 0 #333
+}
+
+.buttons{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    width: 65%;
+    transform: translate(-57%, 0);
+    display: flex;
+    gap: 20px
+}
+
+.button{
+    width: 50%;
+    padding: 4%;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: clamp(8px, 5vw, 1rem);
+    font-weight: 600;
+    color:white;
+    background-color: #444;
+    box-shadow: -2px 3px  0   #222, -4px 6px 0 black;
+}
+
+
+.button:active{
+    box-shadow: inset -4px 4px 0 #222;
+    font-size: 0.9rem;
+}
+
+.information{
+  position: absolute;
+  bottom: 75%;
+  left: 73%;
+  transform: translate(-65%, 30%);
+  height: 4%;
+}
+.information:hover{
+  cursor: pointer;
+}
+
+.dialog{
+  position: absolute;
+  bottom: 50%;
+  left: 55%;
+  transform: translate(-75%, 80%);
+  width: 30%;
+  /* height: 4%; */
+}
+
+.stats_div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 5px;
+  margin-bottom: 10px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.type_stats {
+  flex: 1;
+  font-weight: bold;
+}
+
+.stats_name,
+.stats_number,
+.stats_weight,
+.stats_height,
+.stats_health,
+.stats_atack,
+.stats_defense,
+.stats_speed {
+  flex: 1;
+  text-align: center;
+  font-weight: 600;
+  color: 6ab7f5;
+  -webkit-text-fill-color: #6ab7f5; /* Will override color (regardless of order) */
+  -webkit-text-stroke: 0.8px black;
+  text-transform: capitalize;
+}
+
+.close_modal {
+  background-color: #6ab7f5; /* Cor de fundo */
+  border: 2px solid black; /* Remover borda */
+  color: white; /* Cor do texto */
+  padding: 5px 16px; /* Espaçamento interno */
+  text-align: center; /* Alinhar texto ao centro */
+  text-decoration: none; /* Remover sublinhado */
+  display: inline-block; /* Display inline-block */
+  font-size: 16px; /* Tamanho da fonte */
+  margin: 4px 2px; /* Margens */
+  cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+  border-radius: 20px; /* Bordas arredondadas */
+  transition: background-color 0.3s ease; /* Transição suave para a mudança de cor */
+}
+
+.close_modal:hover {
+  background-color: red; /* Cor de fundo ao passar o mouse */
+}
+
+.close_modal:active {
+  background-color: #222; /* Cor de fundo ao clicar */
+}
+
+.close_modal:focus {
+  outline: none; /* Remover contorno ao focar */
+  box-shadow: 0 0 5px #888; /* Adicionar sombra ao focar */
+}
